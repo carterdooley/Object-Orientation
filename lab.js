@@ -205,6 +205,9 @@ var user = {
 
 //Code Here
 
+user.email = 'bryan.smith@devmounta.in'
+user.name = 'Bryan G. Smith'
+
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -212,6 +215,9 @@ var user = {
 */
 
 //Code Here
+
+delete user.age
+
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -223,7 +229,16 @@ var user = {
 
 //Code here
 
+class cat{
+  constructor(name, age, color){
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
 
+let Albus = new cat("Albus", 1, "Spotted")
+console.log(Albus.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -234,6 +249,21 @@ var user = {
 */
 
 //Code here
+class wizzard{
+  constructor(name1 , age, favoriteSpell){
+    this.name1 = name1
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+  castSpell(){
+    console.log(`${this.name1} has cast ${this.favoriteSpell}`)
+  }
+}
+
+let dumbledoor = new wizzard('Dumbledoor', 550, 'Avada Cadabra')
+
+dumbledoor.castSpell()
+
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -260,6 +290,26 @@ var user = {
 
 //Code Here
 
+class phone{
+  constructor(brand, model, storage, color, price, soldProperties){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.soldProperties = soldProperties
+    soldProperties = false
+  }
+  sell(){
+    this.soldproperties = false
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice){
+    this.price = newPrice
+    console.log(this.price)
+  }
+}
+
   
 /*
     Next make three new phone instances using your class.
@@ -273,6 +323,8 @@ var user = {
 
 //Code Here
 
+let iphone = new phone('Apple', 'Iphone 34', 128, 'Rainbow', 99999999)
+let samsung = new phone('Samsung', 'Galaxy 56', 256, 'Transparent', 96)
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -282,6 +334,9 @@ var user = {
 
 //Code Here 
 
+iphone.changePrice(555555)
+
+
 
 /*
   Now call the sell method on one of your other phone objects
@@ -290,7 +345,8 @@ var user = {
 */
 
 //Code Here 
-
+samsung.sell()
+console.log(this.soldProperties)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -309,7 +365,8 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-
+let colorsCopy = colors
+console.log(colorsCopy)
 
 
 /*
@@ -338,7 +395,9 @@ const shippingInfo = {
 
 //Code Here
 
-
+let helensInfo = Object.assign(contactInfo, shippingInfo)
+console.log(helensInfo
+  )
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
 
@@ -356,13 +415,26 @@ const shippingInfo = {
 
 //Code Here 
 
+class vehicle{
+  constructor(capacity, color, milage){
+    this.capacity = capacity
+    this.color = color
+    this.milage = milage
+  }
+  move(miles){
+    this.milage = miles + this.milage
+    console.log(this.milage)
+  }
+}
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
+
 //Code Here
 
+let f150 = new vehicle(4, 'red', 130000)
 
 /* 
   Now we'll create a class that's based off of the vehicle class. 
