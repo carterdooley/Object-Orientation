@@ -109,7 +109,7 @@ let {color, make, model, year} = carDetails
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName: Carter, lastName: Dooley, title: Mr} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -130,6 +130,28 @@ function greeting( obj ) {
 //Code Here
 
 
+let population = {
+  Utah: 128,
+  California: 384,
+  Texas: 345,
+  Arizona: 984
+}
+const {Utah, California, Texas, Arizona} = population
+
+function totalPopulation (obj) {
+
+sumOfPopulation = Utah + California + Texas + Arizona
+return sumOfPopulation
+
+
+}
+console.log(totalPopulation(population))
+
+
+
+
+
+
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -142,6 +164,24 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+let nutritionInfo = {
+  carb: "The Fuel",
+  protien: "The building materials",
+  fat: "Stored fuel"
+}
+
+const {carb, protien, fat} = nutritionInfo
+
+let nutritionArr = []
+
+function ingredients (obj) {
+  for (key in nutritionInfo) {
+    nutritionArr.push(nutritionInfo[key])
+  } return nutritionArr
+}
+
+console.log(ingredients(nutritionInfo))
 
 
 
