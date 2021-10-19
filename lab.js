@@ -6,7 +6,10 @@
 
 //Code here
 
-
+let me = {
+  name: 'Carter',
+  age: 21
+}
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -17,13 +20,19 @@
 
 //Code here
 
+let dog = {
+  name: 'Joe',
+  color: 'Black',
+  age: 14,
+  goodboy: true
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
@@ -31,7 +40,7 @@
 
 //Code here
 
-
+console.log(dog['color'])
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -41,6 +50,14 @@
 
 //Code here
 
+let favoriteThings = {
+  band: 'Red Hot Chilli Peppers',
+  food: 'Fried Rice',
+  person: 'Jess',
+  book: 'Angels and Demons',
+  movie: 'Pupl Fiction',
+  holiday: 'Birthday'
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
@@ -48,6 +65,8 @@
 
 //Code here
 
+favoriteThings.car = 'f150'
+favoriteThings.show = 'Game of Thrones'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -56,6 +75,9 @@
 
 //Code here
 
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
+console.log(favoriteThings.book)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -74,6 +96,7 @@ var carDetails = {
 
 //Code Here
 
+let {color, make, model, year} = carDetails
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
