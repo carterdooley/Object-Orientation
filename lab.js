@@ -447,15 +447,32 @@ let f150 = new vehicle(4, 'red', 130000)
 
 //Code Here
 
+class motorcycle extends vehicle {
+  constructor(capacity, color, milage, make, isCool){
+    super(capacity, color, milage)
+    this.capacity = capacity
+    this.color = color
+    this.milage = milage
+    this.make = make
+    this.isCool = isCool
+}
+}
+
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
 
+let harley = new motorcycle(2, 'black', 24000, 'Cruiser', false )
+
+
+
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+
+harley.move(3000)
 
 /*
   Let's make another class based off of Vehicle. 
@@ -473,6 +490,27 @@ let f150 = new vehicle(4, 'red', 130000)
 */
 
 //Code Here
+class boat extends vehicle{
+  constructor(capacity, color, milage, name2, type, isSeaWorthy){
+    super(capacity, color, milage)
+    this.capacity = capacity
+    this.color = color
+    this.milage = milage
+    this.name2 = name2
+    this.type = type
+    this.isSeaWorthy = Boolean(isSeaWorthy)
+  }checkSeaWorthiness(){
+    if (this.isSeaWorthy === true){
+      console.log(`The ${this.color} ${this.type} ${this.name2} is seaworthy!`)
+    } else{
+      console.log(`You need to get your ${this.type} in shape!`)
+    }
+  }
+  performMaintenance(){
+    this.isSeaWorthy = true
+    return this.isSeaWorthy
+  }
+}
 
 
 /*
@@ -482,20 +520,27 @@ let f150 = new vehicle(4, 'red', 130000)
 
 //Code Here
 
+let myFirstBoat = new boat(8, 'navy blue', 1000, 'Fortunate Sun', 'Center Console', false )
+
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
 
+myFirstBoat.checkSeaWorthiness()
+
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here 
+myFirstBoat.performMaintenance()
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+console.log(myFirstBoat)
+
